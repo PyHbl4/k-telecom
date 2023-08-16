@@ -1,0 +1,664 @@
+@charset "utf-8";
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+@font-face {
+    font-family: 'Cera Round Pro';
+    src: url(./fonts/CeraRoundPro-Regular.otf);
+}
+
+body {
+    font-family: 'Cera Round Pro';
+    margin: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+button {
+    outline: none;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.wrapper {
+    max-width: 1000px;
+    padding: 0 50px;
+    margin: 0 auto;
+}
+
+.site-header {
+    padding: 22px 0;
+}
+
+.site-header .wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 0;
+}
+
+.site-logo {
+    max-width: 147px;
+}
+
+.site-logo img {
+    width: 100%;
+}
+
+#burger-button {
+    position: relative;
+    display: block;
+    width: 16px;
+    height: 10px;
+    padding: 0;
+    display: none;
+}
+
+#burger-button span {
+    position: absolute;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: black;
+    border-radius: 1px;
+    transition: all .3s;
+}
+
+#burger-button span:first-child {
+    top: 0;
+}
+
+#burger-button span:last-child {
+    bottom: 0;
+}
+
+#burger-button span:nth-child(2),
+#burger-button span:nth-child(3) {
+    top: calc(50% - 1px);
+}
+
+.main-block {
+    background-color: #F2F6F8;
+}
+
+.main-block .wrapper {
+    padding: 85px 50px 90px;
+    position: relative;
+}
+
+.main-block__bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+}
+
+.main-block__info {
+    position: relative;
+    z-index: 1;
+}
+
+.page-title {
+    max-width: 430px;
+    line-height: 1.5;
+    font-size: 30px;
+    letter-spacing: 0.6px;
+    font-weight: 700;
+    color: #2D2D2D;
+    margin: 0 0 10px;
+}
+
+.main-block__list {
+    margin: 0 0 30px;
+    padding: 0 0 0 10px;
+    list-style-position: inside;
+    color: #555;
+}
+
+.main-block__list li {
+    margin-bottom: 5px;
+    font-size: 16px;
+    letter-spacing: 0.32px;
+    line-height: 200%;
+}
+
+.button {
+    width: 203px;
+    max-width: 100%;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    background-color: #C81059;
+    color: #FFF;
+    font-size: 14px;
+    border-radius: 5px;
+}
+
+.button.active {
+    background-color: #0099C8;
+}
+
+.tariff-plans {
+    padding: 52px 0 55px;
+    overflow: hidden;
+}
+
+.section-title {
+    color: #2D2D2D;
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 150%;
+    letter-spacing: 0.56px;
+    margin: 0 0 20px;
+}
+
+#tariff-slider {
+    max-width: 728px;
+    margin: 0 auto 0 0;
+}
+
+.owl-carousel .owl-stage {
+    display: flex;
+}
+
+#tariff-slider .owl-stage-outer {
+    overflow: visible;
+}
+
+#tariff-slider .owl-item {
+    opacity: 0.3;
+    transition: all .2s;
+    pointer-events: none;
+}
+
+#tariff-slider .owl-item.active {
+    opacity: 1;
+    pointer-events: all;
+}
+
+.tariff-slider__item {
+    padding: 30px;
+    -moz-box-shadow: 0px 12px 25px 0px rgba(90, 90, 90, 0.12);
+    -webkit-box-shadow: 0px 12px 25px 0px rgba(90, 90, 90, 0.12);
+    box-shadow: 0px 12px 25px 0px rgba(90, 90, 90, 0.12);
+    border-radius: 10px;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.tariff__title {
+    font-size: 20px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.4px;
+    margin: 0 0 12px;
+}
+
+.tariff__speed-title {
+    color: #ACACAC;
+    font-family: Open sans, sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.28px;
+    margin: 0 0 5px;
+}
+
+.tariff__speed-count {
+    color: #C81059;
+    font-size: 25px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.5px;
+    margin: 0 0 5px;
+}
+
+.tariff__description {
+    color: #555;
+    font-family: Open Sans;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.26px;
+    margin: 0 0 24px;
+}
+
+.tariff__price {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    line-height: 1;
+}
+
+.price__count {
+    margin: 0;
+    font-size: 40px;
+    font-weight: 700;
+    line-height: 1.5;
+    letter-spacing: 0.8px;
+}
+
+.price__for {
+    color: rgba(85, 85, 85, 0.50);
+    font-family: Open Sans;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    letter-spacing: 0.32px;
+    margin: 0;
+}
+
+.tariff__disclaimer {
+    color: rgba(85, 85, 85, 0.50);
+    font-family: Open Sans;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.24px;
+    margin: 0 0 19px;
+}
+
+.check__label {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    grid-template-rows: auto auto;
+    gap: 1px 10px;
+    grid-template-areas: "img high-text"
+        "img low-text";
+    cursor: pointer;
+    align-items: start;
+}
+
+.checkbox__image {
+    aspect-ratio: 1 / 1;
+    width: 23px;
+    height: auto;
+    grid-area: img;
+    cursor: pointer;
+    background-image: url(./img/checkmark_non-active.svg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.check-tv__input:checked~.check__label .checkbox__image {
+    background-image: url(./img/checkmark_active.svg);
+}
+
+.checkbox__text-high {
+    margin: 0;
+    font-size: 14px;
+    grid-area: high-text;
+}
+
+.checkbox__text-low {
+    margin: 0;
+    font-size: 14px;
+    grid-area: low-text;
+}
+
+.check-tv__input {
+    display: none;
+}
+
+.static-callme {
+    max-width: 900px;
+    margin: 0 auto 40px;
+    background-color: #F2F6F8;
+    padding: 50px 50px 85px;
+    border-radius: 20px;
+}
+
+h2.static-callme__title {
+    font-size: 28px;
+    font-weight: 500;
+    line-height: 1.5;
+    letter-spacing: 0.56px;
+    margin: 0 0 20px;
+}
+
+
+#select_service>span>label>input {
+    display: none;
+}
+
+#select_service>span>label>.wpcf7-list-item-label {
+    display: flex;
+    line-height: 1;
+    align-items: center;
+    justify-content: center;
+    padding: 7px 40px;
+    border-radius: 10px;
+    border: 1px solid rgba(45, 45, 45, 0.10);
+    transition: all .2s;
+    cursor: pointer;
+}
+
+#select_service>span>label>input:checked~.wpcf7-list-item-label {
+    border: 1px solid #0099C8;
+    color: #0099C8;
+}
+
+#select_service .wpcf7-list-item {
+    margin: 0;
+}
+
+.static-callme form>p {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    grid-template-areas: "radio radio radio"
+        "name tel submit"
+        "check check check";
+}
+
+.static-callme form>p>br {
+    display: none;
+}
+
+#select_service {
+    display: flex;
+    justify-content: flex-start;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.static-callme form>p>span[data-name="your-name"] {
+    grid-area: name;
+    max-width: 183px;
+    margin-right: 30px;
+}
+
+.static-callme form>p>span[data-name="radio-730"] {
+    grid-area: radio;
+    margin-bottom: 20px;
+}
+
+.static-callme form>p>span[data-name="your-tel"] {
+    grid-area: tel;
+    margin-right: 30px;
+}
+
+.static-callme form>p>input[type="submit"] {
+    grid-area: submit;
+    width: 202px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 1;
+    color: #FFF;
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    background-color: #C81059;
+    cursor: pointer;
+}
+
+.static-callme form>p>span[data-name="checkbox-5"] {
+    grid-area: check;
+}
+
+.static-callme form>p>span>input {
+    width: 100%;
+}
+
+.static-callme form>p>span>input[type="text"] {
+    color: rgba(45, 45, 45, 0.30);
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.24px;
+    padding: 12px 25px;
+    outline: none;
+    border: none;
+    border-radius: 2px;
+    height: 45px;
+}
+
+#i_agree {
+    margin-top: 20px;
+    display: block;
+}
+
+#i_agree>span {
+    margin: 0;
+}
+
+.site-footer {
+    margin-bottom: 21px;
+}
+
+.site-footer .footer__container {
+    display: grid;
+    grid-template-columns: auto 1fr auto;
+    align-items: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    border-top: 1px solid rgba(45, 45, 45, 0.10);
+    border-bottom: 1px solid rgba(45, 45, 45, 0.10);
+}
+
+.footer__copyright {
+    margin: 0 0 0 60px;
+    color: #C2C2C2;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    letter-spacing: 0.28px;
+}
+
+.footer__social {
+    display: flex;
+    font-size: 0;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+#mobile-menu {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: calc(100% - 80px);
+    height: 100vh;
+    background-color: #fff;
+    z-index: 100;
+    transition: all .3s;
+    transform: translateX(-100%);
+}
+
+#mobile-menu.show {
+    transform: translateX(0%);
+}
+
+#main-menu__body {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+#main-menu__body>li {
+    padding: 10px 20px;
+}
+
+#main-menu__body>li>a {
+    pointer-events: none;
+}
+
+
+@media screen and (max-width: 768px) {
+    .static-callme {
+        padding: 20px 10px 20px;
+    }
+
+    .wrapper {
+        padding: 0 10px;
+    }
+
+    #burger-button {
+        display: block;
+    }
+
+    #burger-button.opened span:first-child, #burger-button.opened span:last-child {
+        opacity: 0;
+        visibility: hidden;
+    }
+
+    #burger-button.opened span:nth-child(2) {
+        transform: rotate(45deg);
+    }
+
+    #burger-button.opened span:nth-child(3) {
+        transform: rotate(-45deg);
+    }
+
+    .static-callme form>p {
+        grid-template-columns: repeat(1, 1fr);
+        grid-template-areas:
+            "radio"
+            "name"
+            "tel"
+            "submit"
+            "check";
+    }
+
+    .static-callme form>p>span[data-name="your-name"],
+    .static-callme form>p>span[data-name="your-tel"] {
+        max-width: 100%;
+        margin: 0;
+    }
+
+    .static-callme form>p>span>input[type="text"] {
+        margin-bottom: 10px;
+        width: 100%;
+    }
+
+    .static-callme form>p>input[type="submit"] {
+        width: 100%;
+    }
+
+    .site-footer .footer__container {
+        grid-template-columns: auto auto;
+        grid-template-areas: "logo social"
+            "copyright copyright";
+        row-gap: 5px;
+        border-bottom: none;
+    }
+
+    .site-footer .footer__container .site-logo {
+        grid-area: logo;
+    }
+
+    .footer__social {
+        grid-area: social;
+    }
+
+    .footer__copyright {
+        grid-area: copyright;
+        margin: 0;
+
+    }
+
+    .main-block .wrapper {
+        padding: 20px 10px 12px;
+    }
+    #select_service>span>label>.wpcf7-list-item-label {
+        padding: 6px 10px;
+    }
+    .main-block__bg {
+        position: static;
+        justify-content: center;
+        margin: 0 0 10px;
+    }
+
+    .main-block__bg img {
+        max-width: 100%;
+    }
+    .page-title {
+        max-width: 100%;
+    }
+    .main-block__info .button {
+        width: 100%;
+    }
+    
+}
+
+@media screen and (max-width: 500px) {
+    .page-title {
+        font-size: 20px;
+    }
+    .main-block__list li {
+        font-size: 13px;
+    }
+    .section-title {
+        font-size: 18px;
+    }
+
+    .tariff-slider__item {
+        padding: 20px;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+
+    .tariff__title {
+        font-size: 16px;
+    }
+
+    .tariff__speed-title {
+        font-size: 10px;
+    }
+
+    .tariff__description {
+        font-size: 12px;
+    }
+
+    .tariff__speed-count {
+        font-size: 18px;
+    }
+    .checkbox__text-high {
+        font-size: 12px;
+    }
+
+    .price__count {
+        font-size: 25px;
+    }
+    .price__for {
+        font-size: 14px;
+    }
+    .tariff__disclaimer {
+        font-size: 10px;
+    }
+    #tariff-slider {
+        max-width: 205px;
+    }
+    h2.static-callme__title {
+        font-size: 18px;
+    }
+    #select_service>span>label>.wpcf7-list-item-label {
+        font-size: 11px;
+    }
+    .static-callme form>p>input[type="submit"], .button {
+        font-size: 12px;
+    }
+}
